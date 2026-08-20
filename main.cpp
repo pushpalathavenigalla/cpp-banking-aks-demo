@@ -1,4 +1,6 @@
 #include "crow.h"
+#include <cstdlib>
+#include <string>
 
 int main()
 {
@@ -33,8 +35,18 @@ int main()
         )";
     });
 
-   const char* portEnv = std::getenv("PORT");
+    // Health check endpoint for Azure
+    CROW_ROUTE(app, "/health")
+    ([]()
+    {
+        return crow::response(200, "OK");
+    });
+
+    const char* portEnv = std::getenv("PORT");
     int port = portEnv ? std::stoi(portEnv) : 8080;
 
-     app.port(port).multithreaded().run();
+    app.port(port)
+       .bindaddr("0.0.0.0")
+       .multithreaded()
+       .run();
 }
