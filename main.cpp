@@ -33,5 +33,8 @@ int main()
         )";
     });
 
-    app.port(8080).multithreaded().run();
+   const char* portEnv = std::getenv("PORT");
+    int port = portEnv ? std::stoi(portEnv) : 8080;
+
+     app.port(port).multithreaded().run();
 }
