@@ -19,6 +19,6 @@ steps:
     command: buildAndPush
     repository: welcomewebapp
     dockerfile: Dockerfile
-    containerRegistry: 'helloworld-con'
+    containerRegistry: 'welcomewebapp-docker-con'
     tags: |
       latest
