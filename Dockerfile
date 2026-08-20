@@ -9,6 +9,6 @@ COPY . .
 
 RUN g++ main.cpp -Iinclude -std=c++17 -o WelcomeWebApp
 
-EXPOSE 80
+EXPOSE 8080
 
 CMD ["./WelcomeWebApp"]
