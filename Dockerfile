@@ -7,7 +7,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN g++ main.cpp -std=c++17 -o WelcomeWebApp
+RUN g++ main.cpp -Iinclude -std=c++17 -o WelcomeWebApp
 
 EXPOSE 80
 
