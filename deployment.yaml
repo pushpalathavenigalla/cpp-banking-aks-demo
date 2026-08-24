@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: welcomewebapp
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: welcomewebapp
+
+  template:
+    metadata:
+      labels:
+        app: welcomewebapp
+
+    spec:
+      containers:
+      - name: welcomewebapp
+
+        image: welcomewebappcr.azurecr.io/welcomewebapp:latest
+
+        ports:
+        - containerPort: 8080
