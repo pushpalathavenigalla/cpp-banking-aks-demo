@@ -74,12 +74,26 @@ int main()
         }
 
         .card:hover{
-            transform:translateY(-6px);
+            transform:translateY(-5px);
         }
 
         .icon{
-            font-size:40px;
-            margin-bottom:12px;
+            width:55px;
+            height:55px;
+
+            background:#0078D4;
+            color:white;
+
+            border-radius:50%;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            font-size:18px;
+            font-weight:bold;
+
+            margin-bottom:15px;
         }
 
         .card h3{
@@ -98,14 +112,13 @@ int main()
             color:green;
             font-weight:bold;
             margin-top:10px;
-            margin-bottom:20px;
+            margin-bottom:25px;
         }
 
         footer{
             background:#003366;
             color:white;
             padding:20px;
-            margin-top:20px;
         }
 
     </style>
@@ -121,7 +134,7 @@ int main()
     <div class="container">
 
         <div class="card">
-            <div class="icon">💰</div>
+            <div class="icon">BAL</div>
             <h3>Check Balance</h3>
             <p>
                 View your available account balance securely and instantly.
@@ -129,7 +142,7 @@ int main()
         </div>
 
         <div class="card">
-            <div class="icon">➕</div>
+            <div class="icon">DEP</div>
             <h3>Deposit Money</h3>
             <p>
                 Deposit money into your account quickly and securely.
@@ -137,7 +150,7 @@ int main()
         </div>
 
         <div class="card">
-            <div class="icon">💸</div>
+            <div class="icon">WDR</div>
             <h3>Withdraw Money</h3>
             <p>
                 Withdraw available funds from your account at any time.
@@ -145,7 +158,7 @@ int main()
         </div>
 
         <div class="card">
-            <div class="icon">🔄</div>
+            <div class="icon">TRF</div>
             <h3>Transfer Funds</h3>
             <p>
                 Transfer money between accounts in a secure manner.
@@ -153,7 +166,7 @@ int main()
         </div>
 
         <div class="card">
-            <div class="icon">📄</div>
+            <div class="icon">HIS</div>
             <h3>Transaction History</h3>
             <p>
                 View your complete account transaction history.
@@ -161,7 +174,7 @@ int main()
         </div>
 
         <div class="card">
-            <div class="icon">👤</div>
+            <div class="icon">ACC</div>
             <h3>Account Details</h3>
             <p>
                 Manage and view customer profile information.
@@ -171,7 +184,7 @@ int main()
     </div>
 
     <div class="status">
-        ✅ Banking Services Available
+        Banking Services Available
     </div>
 
     <footer>
