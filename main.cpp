@@ -8,8 +8,8 @@ int main()
     crow::SimpleApp app;
 
     std::cout << "=================================" << std::endl;
-    std::cout << "Application Started Successfully" << std::endl;
-    std::cout << "Azure Deployment Demo Running" << std::endl;
+    std::cout << "Banking Application Started" << std::endl;
+    std::cout << "C++ Banking Application Running" << std::endl;
     std::cout << "=================================" << std::endl;
 
     CROW_ROUTE(app, "/")
@@ -18,128 +18,172 @@ int main()
         std::cout << "[INFO] Home Page Accessed" << std::endl;
 
         return R"(
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Azure Welcome Page</title>
+    <title>Banking Application</title>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            margin: 0;
-            padding: 0;
+
+        *{
+            box-sizing:border-box;
         }
 
-        .header {
-            background-color: #0078D4;
-            color: white;
-            padding: 30px;
+        body{
+            font-family:Arial,sans-serif;
+            background:#f4f7fb;
+            margin:0;
+            padding:0;
+            text-align:center;
         }
 
-        .container {
-            margin-top: 30px;
+        .header{
+            background:linear-gradient(135deg,#003366,#0078D4);
+            color:white;
+            padding:30px;
         }
 
-        .card {
-            display: inline-block;
-            width: 220px;
-            min-height: 180px;
-            margin: 10px;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
-            vertical-align: top;
+        .header h1{
+            margin-bottom:5px;
         }
 
-        .card h2 {
-            color: #0078D4;
-            margin-top: 0;
+        .header h3{
+            margin-top:0;
+            font-weight:normal;
         }
 
-        .status {
-            margin-top: 30px;
-            font-size: 22px;
-            color: green;
-            font-weight: bold;
+        .container{
+            width:90%;
+            margin:30px auto;
+
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:25px;
         }
 
-        footer {
-            margin-top: 40px;
-            padding: 20px;
-            background: #0078D4;
-            color: white;
+        .card{
+            background:white;
+            border-radius:15px;
+            padding:20px;
+            text-align:left;
+
+            box-shadow:0 4px 12px rgba(0,0,0,0.15);
+
+            transition:transform 0.3s ease;
         }
+
+        .card:hover{
+            transform:translateY(-6px);
+        }
+
+        .icon{
+            font-size:40px;
+            margin-bottom:12px;
+        }
+
+        .card h3{
+            color:#0078D4;
+            margin-top:0;
+            margin-bottom:10px;
+        }
+
+        .card p{
+            color:#555;
+            line-height:1.5;
+        }
+
+        .status{
+            font-size:22px;
+            color:green;
+            font-weight:bold;
+            margin-top:10px;
+            margin-bottom:20px;
+        }
+
+        footer{
+            background:#003366;
+            color:white;
+            padding:20px;
+            margin-top:20px;
+        }
+
     </style>
 </head>
 
 <body>
 
     <div class="header">
-        <h1>Welcome to Azure Deployment Demo</h1>
-        <h3>C++ Web Application</h3>
+        <h1>Welcome to Banking Application</h1>
+        <h3>C++ Application</h3>
     </div>
 
     <div class="container">
 
         <div class="card">
-            <h2>1. Push Code</h2>
+            <div class="icon">💰</div>
+            <h3>Check Balance</h3>
             <p>
-                Push source code, Dockerfile and YAML files
-                into Azure Repos.
+                View your available account balance securely and instantly.
             </p>
         </div>
 
         <div class="card">
-            <h2>2. Pipeline</h2>
+            <div class="icon">➕</div>
+            <h3>Deposit Money</h3>
             <p>
-                Azure Pipeline builds the application
-                and creates the Docker image.
+                Deposit money into your account quickly and securely.
             </p>
         </div>
 
         <div class="card">
-            <h2>3. Release</h2>
+            <div class="icon">💸</div>
+            <h3>Withdraw Money</h3>
             <p>
-                Deploy the latest container image
-                to the target environment.
+                Withdraw available funds from your account at any time.
             </p>
         </div>
 
         <div class="card">
-            <h2>4. AKS</h2>
+            <div class="icon">🔄</div>
+            <h3>Transfer Funds</h3>
             <p>
-                Azure Kubernetes Service runs
-                the containerized application.
+                Transfer money between accounts in a secure manner.
             </p>
         </div>
 
         <div class="card">
-            <h2>5. Monitoring</h2>
+            <div class="icon">📄</div>
+            <h3>Transaction History</h3>
             <p>
-                Monitor pod health, application logs
-                and deployment status.
+                View your complete account transaction history.
             </p>
         </div>
 
-        <div class="status">
-            Successfully Hosted on Azure Kubernetes Service
+        <div class="card">
+            <div class="icon">👤</div>
+            <h3>Account Details</h3>
+            <p>
+                Manage and view customer profile information.
+            </p>
         </div>
 
     </div>
 
+    <div class="status">
+        ✅ Banking Services Available
+    </div>
+
     <footer>
-        Azure Repos → Pipeline → Release → AKS → Monitoring
+        Secure Banking System | C++ Banking Application
     </footer>
 
 </body>
 </html>
+
         )";
     });
 
-    // Health Check Endpoint
     CROW_ROUTE(app, "/health")
     ([]()
     {
