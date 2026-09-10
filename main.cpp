@@ -80,18 +80,12 @@ int main()
         .icon{
             width:55px;
             height:55px;
-
             background:#0078D4;
-            color:white;
-
             border-radius:50%;
 
             display:flex;
             justify-content:center;
             align-items:center;
-
-            font-size:18px;
-            font-weight:bold;
 
             margin-bottom:15px;
         }
@@ -134,7 +128,12 @@ int main()
     <div class="container">
 
         <div class="card">
-            <div class="icon">BAL</div>
+            <div class="icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+                    <path d="M21 7H3V17H21V7ZM19 15H5V9H19V15ZM7 11H10V13H7V11Z"/>
+                </svg>
+            </div>
+
             <h3>Check Balance</h3>
             <p>
                 View your available account balance securely and instantly.
@@ -142,7 +141,12 @@ int main()
         </div>
 
         <div class="card">
-            <div class="icon">DEP</div>
+            <div class="icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+                    <path d="M19 11H13V5H11V11H5V13H11V19H13V13H19V11Z"/>
+                </svg>
+            </div>
+
             <h3>Deposit Money</h3>
             <p>
                 Deposit money into your account quickly and securely.
@@ -150,7 +154,12 @@ int main()
         </div>
 
         <div class="card">
-            <div class="icon">WDR</div>
+            <div class="icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+                    <path d="M19 11H5V13H19V11Z"/>
+                </svg>
+            </div>
+
             <h3>Withdraw Money</h3>
             <p>
                 Withdraw available funds from your account at any time.
@@ -158,7 +167,12 @@ int main()
         </div>
 
         <div class="card">
-            <div class="icon">TRF</div>
+            <div class="icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+                    <path d="M7 7L3 11L7 15V12H14V10H7V7ZM17 17L21 13L17 9V12H10V14H17V17Z"/>
+                </svg>
+            </div>
+
             <h3>Transfer Funds</h3>
             <p>
                 Transfer money between accounts in a secure manner.
@@ -166,7 +180,12 @@ int main()
         </div>
 
         <div class="card">
-            <div class="icon">HIS</div>
+            <div class="icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+                    <path d="M14 2H6C4.9 2 4 2.9 4 4V20L8 16H14C15.1 16 16 15.1 16 14V4C16 2.9 15.1 2 14 2Z"/>
+                </svg>
+            </div>
+
             <h3>Transaction History</h3>
             <p>
                 View your complete account transaction history.
@@ -174,7 +193,12 @@ int main()
         </div>
 
         <div class="card">
-            <div class="icon">ACC</div>
+            <div class="icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+                    <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z"/>
+                </svg>
+            </div>
+
             <h3>Account Details</h3>
             <p>
                 Manage and view customer profile information.
